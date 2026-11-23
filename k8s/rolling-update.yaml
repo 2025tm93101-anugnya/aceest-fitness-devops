@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: aceest
-          image: YOUR_DOCKERHUB_USERNAME/aceest-fitness:latest
+          image: anugnya2711/aceest-fitness:latest
           ports:
             - containerPort: 5000
           env:
@@ -35,5 +35,6 @@ spec:
   selector:
     app: aceest-rolling
   ports:
-    - port: 80
+    - port: 5000
       targetPort: 5000
+      nodePort: 30000
